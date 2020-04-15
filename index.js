@@ -15,7 +15,7 @@ const energisersRouter = require("./routes/energisers");
 app.use("/energisers", energisersRouter);
 
 app.get("/", async (req, res) => {
-  res.send({ success: true, message: "SERVER BE SERVING", payload: data });
+  res.send({ success: true, message: "SERVER BE SERVING" });
 });
 
 app.listen(process.env.PORT || PORT, () => {
