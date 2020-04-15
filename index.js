@@ -18,6 +18,6 @@ app.get("/", async (req, res) => {
   res.send({ success: true, message: "SERVER BE SERVING", payload: data });
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`listening on port: ${PORT}`);
 });
