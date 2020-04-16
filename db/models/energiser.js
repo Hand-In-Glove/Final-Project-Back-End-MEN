@@ -11,6 +11,7 @@ const energiserSchema = new mongoose.Schema({
   resourcesNeeded: { type: Array },
   category: { type: Array },
   outcomes: { type: Array },
+  rating: { type: Number },
 });
 
 module.exports = mongoose.model("Energiser", energiserSchema);
