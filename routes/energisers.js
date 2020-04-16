@@ -30,6 +30,7 @@ router.post("/", async (req, res) => {
     resourcesNeeded,
     category,
     outcomes,
+    rating,
   } = req.body;
   const energiser = new Energiser({
     title,
@@ -42,6 +43,7 @@ router.post("/", async (req, res) => {
     resourcesNeeded,
     category,
     outcomes,
+    rating,
   });
   try {
     const newEnergiser = await energiser.save();
@@ -82,6 +84,9 @@ router.patch("/:id", getEnergiserById, async (req, res) => {
   }
   if (req.body.images !== null) {
     res.energiser.images = req.body.images;
+  }
+  if (req.body.rating !== null) {
+    res.energiser.rating = req.body.rating;
   }
 
   try {
