@@ -14,6 +14,9 @@ db.once("open", () => console.log("connected to database"));
 
 app.use(express.json());
 
+const interestRouter = require("./routes/interestRoute");
+app.use("/interest", interestRouter);
+
 const energisersRouter = require("./routes/energisers");
 app.use("/energisers", energisersRouter);
 
