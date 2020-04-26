@@ -5,8 +5,8 @@ const Interest = require("../db/models/interest");
 //Get all
 interestRouter.get("/", async (req, res) => {
   try {
-    const interests = await Interest.find();
-    res.json(interests);
+    // const interests = await Interest.find();
+    res.json({ message: "Access Denied" });
   } catch (err) {
     res.json({ message: err.message });
   }
